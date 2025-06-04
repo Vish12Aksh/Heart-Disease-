@@ -1,0 +1,61 @@
+#container123 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#heartDiseaseForm {
+    background-image: url("/static/image/pexels-martabranco-30784707.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+#container123 button {
+    background-color: #e75480; /* Deep pink */
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 5px; /* Equal space around each button */
+}
+
+#container123 button:hover {
+    background-color: #c2185b; /* Even deeper pink on hover */
+}
+
+#container123 button:nth-child(1) {
+    order: 1;
+    margin-right: auto;
+}
+#container123 button:nth-child(2) {
+    order: 2;
+    margin: 0 auto;
+}
+#container123 button:nth-child(3) {
+    order: 3;
+    margin-left: auto;
+}
+
+#contrainer124{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#contrainer124 h2 {
+    color: #333; /* Dark gray for better readability */
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    
+}                                       
