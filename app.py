@@ -84,7 +84,7 @@ def get_user_input(**dftg):
     print(3)
     # Make prediction
     prediction = model.predict(user_input_scaled)
-    result = "Diabetic" if prediction[0] == 1 else "Non-Diabetic"
+    result = "Heart Disease is not prsent" if prediction[0] == 1 else "Heart disease is present"
 
     return  result # Returning the prediction result
 
