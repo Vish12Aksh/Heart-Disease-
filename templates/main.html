@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Heart Disease Form - Background on Body</title>
+    <link rel="stylesheet" type="text/css" href="static/CSS.css" />
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease</title>
+    <script src="static/jav.js"></script>
+
+
+<body>
+
+    <h2>HEART DISEASE</h2>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">Heart Disease</div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#">Home</a>
+                <a href="https://diabetes-test-campus.onrender.com">Diabetes</a>
+                <a href="#">Todo</a>
+                <a href="#" class="disabled">Disabled</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <h1>Heart Disease Prediction Form</h1>
+        <div class="container">
+            <form id="heartDiseaseForm">
+                <div class="form-row">
+                    <div class="form-part">
+                        <!-- <h3>Personal Information</h3> -->
+                        <div>
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="Age" min="0" max="120" placeholder="Age in years">
+                        </div>
+                        <div>
+                            <label for="sex">Gender</label>
+                            <select id="sex" name="Sex">
+                                <option value="">Select</option>
+                                <option value="0">Female</option>
+                                <option value="1">Male</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="chest_pain_type">Chest pain type</label>
+                            <select id="chest_pain_type" name="Chest pain type">
+                                <option value="">Select type</option>
+                                <option value="1">Typical angina</option>
+                                <option value="2">Atypical angina</option>
+                                <option value="3">Non-anginal pain</option>
+                                <option value="4">Asymptomatic</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="bp">BP</label>
+                            <input type="number" id="bp" name="BP" min="0" max="200" placeholder="94 - 200">
+                        </div>
+                        <div>
+                            <label for="cholesterol">Cholesterol</label>
+                            <input type="number" id="cholesterol" name="Cholesterol" min="0" max="564"
+                                placeholder="126 - 564">
+                        </div>
+                        <div>
+                            <label for="fbs_over_120">FBS over 120</label>
+                            <select id="fbs_over_120" name="FBS over 120">
+                                <option value="">Select</option>
+                                <option value="0">False</option>
+                                <option value="1">True</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-part">
+                        <!-- <h3>Medical Information</h3> -->
+                        <div>
+                            <label for="ekg_results">EKG results</label>
+                            <select id="ekg_results" name="EKG results">
+                                <option value="">Select</option>
+                                <option value="0">Normal</option>
+                                <option value="1">ST-T wave abnormality</option>
+                                <option value="2">Probable or definite LVH</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="max_hr">Max HR</label>
+                            <input type="number" id="max_hr" name="Max HR" min="0"
+                                placeholder="Max HR (Maximum heart rate achieved) : 71 - 202">
+                        </div>
+                        <div>
+                            <label for="exercise_angina">Exercise angina</label>
+                            <select id="exercise_angina" name="Exercise angina">
+                                <option value="">Select</option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="st_depression">ST depression</label>
+                            <input type="number" id="st_depression" name="ST depression" step="any" min="0.0" max='6.2'
+                                placeholder="0.0 - 6.2">
+                        </div>
+                        <div>
+                            <label for="slope_of_st">Slope of ST</label>
+                            <select id="slope_of_st" name="Slope of ST">
+                                <option value="">Select</option>
+                                <option value="1">Upsloping</option>
+                                <option value="2">Flat</option>
+                                <option value="3">Downsloping</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="number_of_vessels_fluro">Number of vessels fluro</label>
+                            <select id="number_of_vessels_fluro" name="Number of vessels fluro">
+                                <option value="">Select</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="thallium">Thallium</label>
+                            <select id="thallium" name="Thallium">
+                                <option value="">Select</option>
+                                <option value="3">Normal</option>
+                                <option value="6">Fixed defect</option>
+                                <option value="7">Reversible defect</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- You can add your form or content below this heading -->
+    </main>
+    <div class="pink-container">
+
+        <div class="pink-container">
+
+            <button type="button" id="botton1" onclick="printData()">Submit</button>
+            <button type="button" id="botton1" onclick="location.reload()">Reload</button>
+            <button type="button" id="botton1" onclick="clearData()">Clear Data</button>
+        </div>
+    </div>
+    <div id="resultshow">
+        <p id="resultshow1"> ResultShow</p>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>
